@@ -1,32 +1,33 @@
+/* eslint-disable quotes */
 import React from 'react';
 import PropTypes from 'prop-types';
 import Layout from 'components/layout';
 import Box from 'components/box';
 import Title from 'components/title';
-import Gallery from 'components/gallery';
-import IOExample from 'components/io-example';
-import Modal from 'containers/modal';
 import { graphql } from 'gatsby';
+import { SubTitle } from '../components/gallery/item/item.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 const Index = ({ data }) => (
   <Layout>
     <Box>
       <Title as="h2" size="large">
-        {data.homeJson.content.childMarkdownRemark.rawMarkdownBody}
+        {"Hi 👋🏻! I'm Ludwig, a french developer who "}
+        <FontAwesomeIcon icon={faHeart} color="red" size="xs" />
+        {' javascript!'}
       </Title>
-      <Modal>
-        <video
-          src="https://i.imgur.com/gzFqNSW.mp4"
-          playsInline
-          loop
-          autoPlay
-          muted
-        />
-      </Modal>
+      <SubTitle
+        dangerouslySetInnerHTML={{
+          __html: data.homeJson.subtext.childMarkdownRemark.html,
+        }}
+      />
+      <SubTitle>
+        Busy coding right now, updated content will be published as soon as
+        possible.
+      </SubTitle>
     </Box>
-    <Gallery items={data.homeJson.gallery} />
-    <div style={{ height: '50vh' }} />
-    <IOExample />
+    <div style={{ height: '30vh' }} />
   </Layout>
 );
 
@@ -40,7 +41,13 @@ export const query = graphql`
   query HomepageQuery {
     homeJson {
       title
-      content {
+      headline {
+        childMarkdownRemark {
+          html
+          rawMarkdownBody
+        }
+      }
+      subtext {
         childMarkdownRemark {
           html
           rawMarkdownBody

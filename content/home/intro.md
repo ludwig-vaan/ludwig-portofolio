@@ -1,1 +1,2 @@
-An opinionated starter for using Gatsby v2 with React Context, tag-agnostic styled-components, page transitions and scroll events with IntersectionObserver.
+I am a mobile developer living in beautiful Bordeaux 🍷🇫🇷.  
+I mostly work with JavaScript (React.js & React Native), but have also experience with Node.js & learning Swift.

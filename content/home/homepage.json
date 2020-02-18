@@ -1,6 +1,7 @@
 {
   "title": "Home",
-  "content": "intro.md",
+  "headline": "headline.md",
+  "subtext" : "intro.md",
   "gallery": [{
     "title": "React Context",
     "copy": "For global styles.",

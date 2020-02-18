@@ -5,24 +5,38 @@ module.exports = {
     ...siteConfig,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sitemap`,
-    `gatsby-plugin-offline`,
-    `gatsby-transformer-json`,
-    `gatsby-transformer-remark`,
-    `gatsby-plugin-eslint`,
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-offline',
+    'gatsby-transformer-json',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-transformer-remark',
       options: {
-        name: `content`,
+        // CommonMark mode (default: true)
+        commonmark: true,
+        // Footnotes mode (default: true)
+        footnotes: true,
+        // Pedantic mode (default: true)
+        pedantic: true,
+        // GitHub Flavored Markdown mode (default: true)
+        gfm: true,
+        // Plugins configs
+        plugins: [],
+      },
+    },
+    'gatsby-plugin-eslint',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'content',
         path: `${__dirname}/content`,
       },
     },
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-webpack-size`,
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-webpack-size',
     {
-      resolve: `gatsby-plugin-react-svg`,
+      resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
           include: /images\/.*\.svg$/,

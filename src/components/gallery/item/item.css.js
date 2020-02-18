@@ -16,3 +16,12 @@ export const Copy = styled.p`
     margin-bottom: 4rem;
   `};
 `;
+
+export const SubTitle = styled.div`
+  color: #757575;
+  margin: 2rem 2rem 2rem 0rem;
+
+  ${MEDIA.TABLET`
+    margin-bottom: 4rem;
+  `};
+`;
