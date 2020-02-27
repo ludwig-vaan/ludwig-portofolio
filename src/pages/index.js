@@ -27,7 +27,6 @@ const Index = ({ data }) => (
         possible.
       </SubTitle>
     </Box>
-    <div style={{ height: '30vh' }} />
   </Layout>
 );
 

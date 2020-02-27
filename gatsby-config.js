@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 const siteConfig = require('./site-config');
 
 module.exports = {
@@ -5,6 +9,14 @@ module.exports = {
     ...siteConfig,
   },
   plugins: [
+    {
+      resolve: 'gatsby-source-sanity',
+      options: {
+        projectId: '0zs37si6',
+        dataset: 'production',
+        token: process.env.MY_SANITY_TOKEN,
+      },
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-offline',

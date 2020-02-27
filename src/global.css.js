@@ -92,3 +92,13 @@ export default createGlobalStyle`
     margin-bottom: 2rem;
   }
 `;
+
+export const breakpoints = {
+  phone_small: 320,
+  phone: 376,
+  phablet: 540,
+  tablet: 735,
+  desktop: 992,
+  desktop_medium: 1280,
+  desktop_large: 1440,
+};
