@@ -1,5 +1,5 @@
 import React from 'react';
-import { format, distanceInWords, differenceInDays } from 'date-fns';
+import { format, formatDistance, differenceInDays } from 'date-fns';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import {
@@ -108,11 +108,12 @@ const BlogPostTemplate = props => {
               <Title>{post.title}</Title>
               {_rawBody && <PortableText blocks={_rawBody} />}
             </MainContent>
+
             <aside>
               {publishedAt && (
                 <PublishedAt>
                   {differenceInDays(new Date(publishedAt), new Date()) > 3
-                    ? distanceInWords(new Date(publishedAt), new Date())
+                    ? formatDistance(new Date(publishedAt), new Date())
                     : format(new Date(publishedAt), 'MMMM do, yyyy')}
                 </PublishedAt>
               )}

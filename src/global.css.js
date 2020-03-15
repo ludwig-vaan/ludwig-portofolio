@@ -91,6 +91,10 @@ export default createGlobalStyle`
   p {
     margin-bottom: 2rem;
   }
+
+  .basePortableText {
+    line-height: 1.2 
+  }
 `;
 
 export const breakpoints = {
