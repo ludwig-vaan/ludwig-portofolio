@@ -12,6 +12,7 @@ const About = ({ data }) => (
     <Box>
       <CvContainer>
         <div
+          style={{ lineHeight: '1.2' }}
           dangerouslySetInnerHTML={{
             __html: data.aboutJson.content.childMarkdownRemark.html,
           }}

@@ -18,12 +18,12 @@ Mobile developer at <a href="https://pro.adoria.com">Adoria</a>, FoodTech compag
 ## Summary
 
 After my studies in home automation and experience as an entrepreneur . I decided to focus on mobile and web development. I am strongly interested in the Internet of Things, FinTech, FoodTech and home automation.
-I am currently learning Cloud Dev Ops on AWS & Swift.
+I am currently learning Cloud Dev Ops on AWS & Swift on Udacity.
 
 ## Professional experience
 
 - <span id="xp">Mobile Developer</span> at Adoria, July 2019 - Current, Bordeaux, France
-- <span id="xp">Web & Mobile Developer</span> at Cdiscount, August 2018 to June 2019, Bordeaux, France
+- <span id="xp">Web & Mobile Developer</span> as consultant at Cdiscount, August 2018 to June 2019, Bordeaux, France
 
 ## My current stack 
 

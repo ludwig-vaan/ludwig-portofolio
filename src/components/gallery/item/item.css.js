@@ -19,6 +19,7 @@ export const Copy = styled.p`
 
 export const SubTitle = styled.div`
   color: #757575;
+  line-height: 1.2;
   margin: 2rem 2rem 2rem 0rem;
 
   ${MEDIA.TABLET`
